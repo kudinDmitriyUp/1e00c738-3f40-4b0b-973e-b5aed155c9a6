@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleApple from "@/components/navbar/NavbarStyleApple/NavbarStyleApple";
@@ -14,7 +14,7 @@ import FaqSplitText from "@/components/sections/faq/FaqSplitText";
 import BlogCardTwo from "@/components/sections/blog/BlogCardTwo";
 import ContactCenter from "@/components/sections/contact/ContactCenter";
 import FooterBase from "@/components/sections/footer/FooterBase";
-import { BarChart3, Briefcase, Building2, Euro, FileText, HandHeart, Lightbulb, Linkedin, Mail, Newspaper, Quote, Seedling, Shield, Target, TrendingUp, Twitter, Users } from "lucide-react";
+import { BarChart3, Briefcase, Building2, Euro, FileText, HandHeart, Lightbulb, Linkedin, Mail, Newspaper, Quote, Shield, Target, TrendingUp, Twitter, Users } from "lucide-react";
 
 export default function Home() {
   return (
@@ -79,7 +79,7 @@ export default function Home() {
           gridVariant="uniform-all-items-equal"
           animationType="slide-up"
           features={[
-            { title: "Seed Stage Focus", icon: Seedling },
+            { title: "Seed Stage Focus", icon: Building2 },
             { title: "B2B Digital Space", icon: Building2 },
             { title: "Active Support", icon: HandHeart },
             { title: "Strategic Know-how", icon: Lightbulb }
