@@ -2,18 +2,18 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleApple from "@/components/navbar/NavbarStyleApple/NavbarStyleApple";
-import HeroBillboard from "@/components/sections/hero/HeroBillboard";
-import TextAbout from "@/components/sections/about/TextAbout";
-import FeatureCardFive from "@/components/sections/feature/FeatureCardFive";
-import ProductCardTwo from "@/components/sections/product/ProductCardTwo";
-import MetricCardOne from "@/components/sections/metrics/MetricCardOne";
-import TeamCardThree from "@/components/sections/team/TeamCardThree";
-import TestimonialCardOne from "@/components/sections/testimonial/TestimonialCardOne";
-import SocialProofOne from "@/components/sections/socialProof/SocialProofOne";
-import FaqSplitText from "@/components/sections/faq/FaqSplitText";
-import BlogCardTwo from "@/components/sections/blog/BlogCardTwo";
-import ContactCenterForm from "@/components/sections/contact/ContactCenterForm";
-import FooterBase from "@/components/sections/footer/FooterBase";
+import HeroBillboard from '@/components/sections/hero/HeroBillboard';
+import TextAbout from '@/components/sections/about/TextAbout';
+import FeatureCardFive from '@/components/sections/feature/FeatureCardFive';
+import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
+import MetricCardOne from '@/components/sections/metrics/MetricCardOne';
+import TeamCardThree from '@/components/sections/team/TeamCardThree';
+import TestimonialCardOne from '@/components/sections/testimonial/TestimonialCardOne';
+import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
+import FaqSplitText from '@/components/sections/faq/FaqSplitText';
+import BlogCardTwo from '@/components/sections/blog/BlogCardTwo';
+import ContactCenter from '@/components/sections/contact/ContactCenter';
+import FooterBase from '@/components/sections/footer/FooterBase';
 import { BarChart3, Briefcase, Building2, Euro, FileText, HandHeart, Lightbulb, Linkedin, Mail, Newspaper, Quote, Shield, Target, TrendingUp, Twitter, Users } from "lucide-react";
 
 export default function Home() {
@@ -371,42 +371,15 @@ export default function Home() {
       </div>
 
       <div id="contact" data-section="contact">
-        <ContactCenterForm
+        <ContactCenter
+          tag="Get In Touch"
           title="Connect with The Techshop"
           description="Whether you're a startup seeking seed funding or an investor interested in our approach, we'd love to hear from you."
-          inputs={[
-            { name: "name", type: "text", placeholder: "Full Name", required: true },
-            { name: "email", type: "email", placeholder: "Email Address", required: true },
-            { name: "company", type: "text", placeholder: "Company Name", required: false },
-            { name: "role", type: "text", placeholder: "Your Role/Title", required: false },
-            {
-              name: "user_type",
-              type: "select",
-              placeholder: "I am a...",
-              required: true,
-              options: [
-                { value: "startup_founder", label: "Startup Founder" },
-                { value: "co_investor", label: "Co-Investor" }
-              ]
-            }
-          ]}
-          textarea={{
-            name: "message",
-            placeholder: "Tell us about your venture or investment interests...",
-            rows: 5,
-            required: true
-          }}
-          buttonText="Send Message"
-          onSubmit={(data) => {
-            console.log('Contact form submitted:', data);
-            // Handle form submission based on user_type
-            if (data.user_type === 'startup_founder') {
-              // Route to startup founder pipeline
-              console.log('Processing startup founder inquiry');
-            } else if (data.user_type === 'co_investor') {
-              // Route to co-investor pipeline
-              console.log('Processing co-investor inquiry');
-            }
+          inputPlaceholder="Enter your email"
+          buttonText="Get Started"
+          termsText="By clicking Get Started you're confirming that you agree with our Terms and Conditions."
+          onSubmit={(email) => {
+            console.log('Contact form submitted:', email);
           }}
         />
       </div>
